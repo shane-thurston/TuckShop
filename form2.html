@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Form</title>
+	<link rel="stylesheet" type="text/css" href="formstyles.css">
+	<script>
+		function checkPass() {
+			var password1 = document.forms["myForm"]["pass"].value;
+			var password2 = document.forms["myForm"]["pass-repeat"].value;
+			
+			if (password1 != password2) {
+				outputText.textContent = "Your passwords do not match.";
+				document.forms["myForm"]["pass"].value = "";
+				document.forms["myForm"]["pass-repeat"].value = "";
+				return false
+			}
+			
+			if (password1.length < 3) {
+				outputText.textContent = "Your password is too short.";
+				document.forms["myForm"]["pass"].value = "";
+				document.forms["myForm"]["pass-repeat"].value = "";
+				return false
+			}
+		}
+	</script>
+</head>
+
+	<body>
+		<div id="container">
+			<h1>Form Test</h1>
+			<p>Enter your details. JavaScript checking</p>
+			<hr>
+			
+			<form name="myForm" action="action_page.php" method="post">
+				<label><strong>Email</strong></label>
+				<input type="text" placeholder="Email" name="email" required>
+				
+				<label><strong>Password</strong></label>
+				<input type="password" placeholder="Password" name="pass" required>
+				
+				<label><strong>Repeat Password</strong></label>
+				<input type="password" placeholder="Repeat Password" name="pass-repeat" required>
+				<hr>
+				
+				<button type="submit" class="submitbtn" onclick="checkPass()">Submit</button>
+				
+				<p><span id="outputText" class="error"></span></p>
+			</form>
+		</div>
+	</body>
+</html>
