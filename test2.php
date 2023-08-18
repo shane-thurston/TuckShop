@@ -7,10 +7,10 @@
 	<body>
 		<p>Testing database connection</p>
 		<?php
-			$servername = "fdb28.awardspace.net";
-			$username = "4259529_shaneshop";
+			$servername = "#######";
+			$username = "########";
 			$password = "#########";
-			$dbname = "4259529_shaneshop";
+			$dbname = "########";
 			
 			//Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
