@@ -9,7 +9,7 @@
 		<?php
 			$servername = "fdb28.awardspace.net";
 			$username = "4259529_shaneshop";
-			$password = "Stannies23#";
+			$password = "#########";
 			$dbname = "4259529_shaneshop";
 			
 			//Create connection
